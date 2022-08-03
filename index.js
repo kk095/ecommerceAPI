@@ -10,7 +10,7 @@ app.use("/", require("./router"));
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 
-app.listen(port, function (err) {
+app.listen(process.env.PORT || port, function (err) {
   if (err) {
     console.log(err);
     return;
